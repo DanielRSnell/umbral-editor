@@ -1,0 +1,13 @@
+{
+  "name": "your-vendor/artisan-editor",
+  "description": "Enables Timber/Twig to work with plugins like WP Codebox and Scripts Organizer for creating a high fidelity page building experience",
+  "type": "wordpress-plugin",
+  "require": {
+    "timber/timber": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ArtisanEditor\\": "src/"
+    }
+  }
+}
