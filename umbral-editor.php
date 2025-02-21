@@ -5,14 +5,20 @@
  * Version: 1.0.0
  */
 
-if (!defined('ABSPATH')) {
+if (! defined('ABSPATH')) {
     exit;
 }
 
-require_once __DIR__ . '/src/Artisan.php';
-require_once __DIR__ . '/src/Plugin.php';
+// Vendor
+require_once __DIR__ . '/vendor/autoload.php';
 
-// Bootstrap the plugin
-add_action('plugins_loaded', function () {
-    \ArtisanEditor\Plugin::instance();
-});
+// Initialize Timber.
+Timber\Timber::init();
+
+require_once __DIR__ . '/src/Artisan.php';
+// require_once __DIR__ . '/src/Plugin.php';
+
+// // Bootstrap the plugin
+// add_action('plugins_loaded', function () {
+//     \ArtisanEditor\Plugin::instance();
+// });
